@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using SQLite;
 namespace succWater.Model
 {
      public class Plant : INotifyPropertyChanged
@@ -17,7 +18,8 @@ namespace succWater.Model
           {
 
           }
-
+          [PrimaryKey, AutoIncrement]
+          public int ID { get; set; }
           public string name
           {
                get

@@ -17,6 +17,7 @@ namespace succWater
           {
                InitializeComponent();
                myPlantList = new PlantListViewModel();
+               myPlantList.buildPlantList();
                BindingContext = myPlantList;
                pList.ItemsSource = myPlantList.plants;
                 

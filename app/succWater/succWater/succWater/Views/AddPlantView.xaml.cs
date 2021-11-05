@@ -28,6 +28,7 @@ namespace succWater.Views
                var pSpecies = plantSpecies.Text;
                newPlant.name = pName;
                myPlantList.addPlant(newPlant);
+               Navigation.PopAsync();
           }
 
         
