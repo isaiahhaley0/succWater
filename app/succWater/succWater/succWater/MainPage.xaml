@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="succWater.MainPage">
+
+    <StackLayout>
+        <Frame>
+            <Label Text="succWater: Suculent tracking and monitoring tool.">
+                
+            </Label>
+            
+        </Frame>
+        <Button Text="Add Plant" Clicked="AddPlant"></Button>
+        <ListView x:Name="pList">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding name}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
+    
+</ContentPage>
