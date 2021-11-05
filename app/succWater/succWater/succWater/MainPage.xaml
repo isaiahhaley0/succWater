@@ -11,7 +11,7 @@
             
         </Frame>
         <Button Text="Add Plant" Clicked="AddPlant"></Button>
-        <ListView x:Name="pList">
+        <ListView x:Name="pList" ItemSelected="SelectedPlant">
 
             <ListView.ItemTemplate>
                 <DataTemplate>

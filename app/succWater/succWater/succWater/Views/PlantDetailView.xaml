@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="succWater.Views.PlantDetailView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Name:&#10;"></Span>
+                            <Span Text="{Binding name}"></Span>
+                        </FormattedString>
+                        
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Species:&#10;"></Span>
+                            <Span Text="{Binding species}"></Span>
+                        </FormattedString>
+
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Last Watered:&#10;"></Span>
+                            <Span Text="{Binding lastWatered, StringFormat='{0:MMMM dd, yyyy}'}"></Span>
+                        </FormattedString>
+                        
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="UpdateLastDateWatered">
+                            
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -28,5 +28,12 @@ namespace succWater
                var newPlant = new AddPlantView(ref myPlantList);
                await Navigation.PushAsync(newPlant);
           }
+          public async void SelectedPlant(object sender, SelectedItemChangedEventArgs e)
+          {
+              
+               var thisPlant = (Plant)e.SelectedItem;
+               var plantDetails = new PlantDetailView(ref thisPlant);
+               await Navigation.PushAsync(plantDetails);
+          }
      }
 }

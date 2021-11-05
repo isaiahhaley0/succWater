@@ -11,7 +11,7 @@ namespace succWater.Model
           string myName;
           string mySpecies;
           DateTime lastFertilized;
-          DateTime lastWatered;
+          DateTime myLastWatered;
           double needToWater;
 
           public Plant()
@@ -45,7 +45,18 @@ namespace succWater.Model
                     OnPropertyChanged("species");
                }
           }
-
+          public DateTime lastWatered
+          {
+               get
+               {
+                    return myLastWatered;
+               }
+               set
+               {
+                    myLastWatered = value;
+                    OnPropertyChanged("lastWatered");
+               }
+          }
           protected void OnPropertyChanged(string propertyName)
           {
                var handler = PropertyChanged;
